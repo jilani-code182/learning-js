@@ -1,3 +1,4 @@
+//VARIABLE
 
 // Redeclaration and re-assignment.
 

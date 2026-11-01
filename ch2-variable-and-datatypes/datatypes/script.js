@@ -1,6 +1,6 @@
 //DATATYPES 
 
-// PREMITIVE DATATYPES: 
+// PREMITIVE DATATYPES: ______________________________________________________
 console.log("PREMITIVE DATATYPES")
 
 //1. String
@@ -81,14 +81,16 @@ console.log("\n")
 
 var sym = Symbol("spiderman")
 console.log(sym, typeof sym)          //output: Symbol(spiderman) 'symbol'
+let sym2 = Symbol(10)
+console.log(sym2, typeof sym2)          //Symbol(10) 'symbol'
 
 
 
-// REFERENCE DATATYPES: 
+// REFERENCE DATATYPES: __________________________________________________________
 console.log("\n")
 console.log("REFERENCE DATATYPES")
 
-//1. Array
+// 1. Array
 // Used to store multiple data in one varible. 
 // It can store heterogenous data. 
 // It doesn't store the actual value.
@@ -144,4 +146,44 @@ console.log(multiply(2,3))
 console.log(multiply(2,3))                //this will print it multiple times. the codes is executed the number of times it is called 
 result = multiply(4,4)                    //storing result in a variable
 console.log(result)
+
+
+
+// typeof operator ______________________________________________
+
+
+console.log("\nSIMPLE DATATYPES: ")
+console.log(typeof 10)               //number
+console.log(typeof 20n)              //bigint
+console.log(typeof "Raju")           //string
+console.log(typeof true)             //boolean
+console.log(typeof null)             //object * glitch, it says object instead of null type
+console.log(typeof undefined)        //undefined
+console.log(typeof NaN)              //number * glitch, NaN means 'Not-a-Number' but it still shows 'number' as a type
+console.log(typeof Symbol("Jilani")) //symbol
+
+
+console.log("\nCOMPLEX DATATYPES: ")
+array = []
+object = {}
+function greet(){}
+
+console.log(typeof array)       //object
+console.log(typeof object)      //object
+console.log(typeof greet)       //function * glitch, it says 'function' datatype for function but object for other complex datatypes like: Array and Objects
+
+console.log("\nBUILT-IN CLASS DATATYPES: ")
+console.log(typeof Array)       //function
+console.log(typeof Object)      //function
+console.log(typeof Function)    //function
+
+// Bec. js classes are function internally. 
+// They are built-in functions that can be used to create objects.
+
+// Array    ->	Creates arrays
+// Object   ->	Creates objects
+// Function ->	Creates functions
+
+
+
 
