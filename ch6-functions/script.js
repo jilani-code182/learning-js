@@ -1,0 +1,3 @@
+// FUNCTIONS
+console.log("Function: ")
+
