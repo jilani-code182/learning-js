@@ -134,3 +134,43 @@ function func2(val){
 
 func2(func1)
 
+
+
+// 6. Call back function
+
+function greet(callback){
+    callback()
+}
+
+greet(hello)
+
+function hello(){           //This is a callback function which is passed as an argument in another function
+    console.log("Hello")
+}
+
+
+// 7. Higher Order Function
+// The function which accept or return any function is a higher order function
+
+
+function greet(callback){           //This is a higher order function
+    callback()
+}
+
+greet(hello)
+
+function hello(){           //This is a callback function which is passed as an argument in another function
+    console.log("Hello in higher order")
+}
+
+
+
+// 8. Recursion in Function
+
+let count = 0
+function hi(){
+    console.log("Hi")
+    hi()
+}
+
+hi()
