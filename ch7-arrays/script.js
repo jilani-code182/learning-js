@@ -43,7 +43,7 @@ console.log(arr3)       // [1, 'apple', false, 55, Array(0), {…}, true]
 
 // Array methods: -------------------------------------------------------------
 
-// Which change origional array: ==============================================
+// Which changes origional array: ==============================================
 // 1. push
 // 2. pop
 // 3. shift
@@ -109,7 +109,7 @@ console.log(arr7)       // [1, 2, 3, 10, 11, 12, 20, 22, 24, 30, 33, 37]
 
 
 
-// Which new array: ======================================================
+// Which returns the new array: ======================================================
 console.log("Which return new array: ")
 // 1. slice
 // 2. concat
@@ -142,21 +142,60 @@ console.log(arr12)          //[1, 2, 3, 4, 5, 6, 7]
 console.log(arr13)          //[2, 4, 6, 8, 10, 12, 14], it performs operations on every elemet just like for each
 
 
+
+//map() traverse all the element and also return the value
+console.log(arr12.map((val)=>{
+    console.log(val+"jilani", val+10)           //we can modify each elements
+    return val+"return"                         //we can return values 
+
+}))
+
+
+
+//forEaach(): forEach also traverse the element but it doesn't return any value
+console.log("forEach: ")
+
+result2 = arr12.forEach((val)=>{
+    console.log(val+"nadaf")
+    console.log(val+5)         //we can modify each elements
+    return "hey"
+})
+console.log(result2)                //undefined,  we cannot return anything in forEach
+console.log("\n")
+
+
+//  ________________________________________________________________________________________
+// |Note:                                                                                   |
+// |The difference between map() and forEach() is: map() can retrun while forEach cannot.   |
+// |________________________________________________________________________________________|
+
+
+
+
 // filter()
-arr14 = [10, 20, 30, 40, 50, 60, 70, 80]
+console.log("filter(): ")
+
+arr14 = [10, 20, 30, 40, 50, 60, 20, 70, 80, 20]
 arr15 = arr14.filter((num)=>{
     return num>30
 })
 
-//Also in short form: 
+//--Also in short form: 
 arr15 = arr14.filter(num=>num>30)
 
 console.log(arr14)          // [10, 20, 30, 40, 50, 60, 70, 80]
 console.log(arr15)          //[40, 50, 60, 70, 80], it return the few element that satisfies the filter condition
 
 
+//--Returning a specific values form array: 
+console.log(arr14.filter((num)=>{           
+    return num==20
+}))                                         //[20, 20, 20], It will always return an array, not an individual value. 
 
-// Which returns the value: ===================================================
+
+
+
+// Which returns a value from the array: ===================================================
 console.log("Which returns a value: ")
 // 1. find
 // 2. includes
@@ -188,12 +227,13 @@ console.log(arr19)                  //true
 arr20=arr16.every(num=>num%2==0)
 console.log(arr20)                  //false
 
+
 // reduce()
 // It takes two argument, a callback and a initial value.
 // callback also takes two argument, first paramenter represent the accumulated value and second represents an element
 // We can perform any operation with thses two parameter according to our need 
 
-//Finding sum of all element 
+//--Finding sum of all element 
 arr21 = [2, 44, 4, 22, 77, 86]
 arr22=arr21.reduce((total, num)=>{
     return total+num;
@@ -201,9 +241,10 @@ arr22=arr21.reduce((total, num)=>{
 console.log(arr22)              //235
 
 
-//Finding multiplicaiton of all elements
+//--Finding multiplicaiton of all elements
 arr23=arr21.reduce((total, num)=>{
     return total*num;
 }, 1)
 console.log(arr23)            //51280768
+
 

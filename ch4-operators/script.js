@@ -12,9 +12,27 @@
 
 
 
-// Ternary Operator
+// Ternary Operator 
 
 10>55?console.log("This is True"):console.log("This is Falsse")
+
+
+// Ternary operator is the short form of if-else statement
+console.log("This is test.")
+
+function test(){
+if(10>55){
+    return true
+}else{
+    return false
+}}
+
+console.log(test())                 //false
+
+console.log(10>55?true:false)       //false
+
+10<55?console.log(true):console.log(false)      //false
+
 
 
 // Nullish Coalescing
