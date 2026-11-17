@@ -112,12 +112,13 @@ console.log([...arr1, ...arr2]) // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 a = 10, b=20
 const res = (n1,n2)=>{console.log(n1+n2)}
-res(2,3);
+res(2,3);           //5
 
 
 //Call arrow function without storing inside a variable 
+console.log("Arrow: ");
 
-(()=>{console.log(a+b)})();
+(()=>{console.log(a+b)})();     //30
 
 
 
@@ -173,4 +174,4 @@ function hi(){
     hi()
 }
 
-hi()
+// hi()

@@ -248,3 +248,4 @@ arr23=arr21.reduce((total, num)=>{
 console.log(arr23)            //51280768
 
 
+
