@@ -1,3 +1,5 @@
+// Testing anonymous function, how its defined and called...
+
 
 (function(){
     console.log("Hello")
